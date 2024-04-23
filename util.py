@@ -122,7 +122,7 @@ class MultiScaleCrop(object):
         self.more_fix_crop = more_fix_crop
         self.input_size = input_size if not isinstance(input_size, int) else [
             input_size, input_size]
-        self.interpolation = Image.ANTIALIAS # Image.BILINEAR 
+        self.interpolation = Image.LANCZOS # Image.BILINEAR 
 
     def __call__(self, img):
         im_size = img.size
